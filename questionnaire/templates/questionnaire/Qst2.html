@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey - Part III
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <strong>Please complete the following questionnaire</strong>
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

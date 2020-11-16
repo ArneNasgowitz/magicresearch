@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    End
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+    Thank you for participating in this study!
+    </p>
+    <p>
+    You will receive your wage of 5 Rand plus a bonus payment in some days' time. Please do not share anything about the
+        content of this study!
+    </p>
+    <p>
+    This is your completion code: <button type="button" class="btn btn-lg btn-success" disabled>SURVEY2020</button>
+
+    </p>
+{% endblock %}
+
+{% comment %}
+Potentially ...
+# Add payent information
+# Change by treatment (redistribution vs no redsitribution)
+# Give contact address?
+{% endcomment %}

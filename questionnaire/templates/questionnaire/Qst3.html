@@ -1,0 +1,67 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey - Final comments
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 95%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <strong>Please answer the following final questions about the survey</strong>
+    <p>
+        How difficult was it to understand the following parts of this study?
+    </p>
+        <table class="table table-borderless table-sm">
+        <thead>
+            <tr align="center">
+                <th scope="col", style="width:16.6%"></th>
+                <th scope="col", style="width:16.6%">Not difficult at all</th>
+                <th scope="col", style="width:16.6%">Slightly difficult</th>
+                <th scope="col", style="width:16.6%">Moderately difficult</th>
+                <th scope="col", style="width:16.6%">Difficult</th>
+                <th scope="col", style="width:16.6%">Very difficult</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <th>{{ form.pilot_eff.label }}</th>
+                    {% for choice in form.pilot_eff %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th>{{ form.pilot_inv.label }}</th>
+                    {% for choice in form.pilot_inv %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th>{{ form.pilot_redis.label }}</th>
+                    {% for choice in form.pilot_redis %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th>{{ form.pilot_overall.label }}</th>
+                    {% for choice in form.pilot_overall %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+        </tbody>
+    </table>
+    <table class="table">
+    {% formfield player.check_one %}
+    {% formfield player.feedback %}
+    {% next_button %}
+
+{% endblock %}
