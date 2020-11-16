@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Redistribution - Effort task
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 45%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Below you see the first scenario. Both workers completed the effort task you know from the practice round.
+    </p>
+    <p>
+        Worker 1 <strong>performed better</strong> in the exercise of counting zeros and therefore has a higher initial payment of 6. Worker 2 has
+        performed worse and therefore has an initial payment of 0.
+    </p>
+    <p>
+        Please choose what you consider the appropriate distribution of income between worker 1 and worker 2 and
+        enter it in the row called <strong>final payment</strong>.
+    </p>
+       <table class="table table-responsive table-sm">
+        <thead>
+            <tr align="center">
+                <th class="bg-warning" scope="col" style="width:33%">Effort</th>
+                <th scope="col" style="width:33%">Worker 1</th>
+                <th scope="col" style="width:33%">Worker 2</th>
+           </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Initial Payment</th>
+            <td align="center">
+                6
+            </td>
+            <td align="center">
+                0
+            </td>
+        </tr>
+        <tr>
+            <th>Final Payment</th>
+            <td align="center">
+                {% formfield player.redistribute_eff1 %}
+            </td>
+            <td align="center">
+                {% formfield player.redistribute_eff2 %}
+            </td>
+        </tbody>
+    </table>
+    {% next_button %}
+{% endblock %}
+
+

@@ -1,0 +1,50 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Survey - Emotions
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Please continue as before.
+        Indicate to what extent you feel this way right now, that is, <strong>at the present moment</strong>.
+    </p>
+    <p>
+        Use the following scale to record your answers, ranging from 1 (Very slightly or not at all) to 5 (Extremely)
+    </p>
+    <table class="table table-borderless table-sm">
+        <thead>
+            <tr align="center">
+                <th scope="col", style="width:16.6%"></th>
+                <th scope="col", style="width:16.6%">Very slightly or not at all</th>
+                <th scope="col", style="width:16.6%">a bit</th>
+                <th scope="col", style="width:16.6%">moderately</th>
+                <th scope="col", style="width:16.6%">quite a bit</th>
+                <th scope="col", style="width:16.6%">extremely</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for field in form %}
+                <tr>
+                    <th>{{ field.label }}</th>
+                    {% for choice in field %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table">
+
+
+</table>
+    {% next_button %}
+{% endblock %}
+
+

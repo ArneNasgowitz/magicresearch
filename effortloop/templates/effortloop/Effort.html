@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Effort task - Box {{ player.round }}
+{% endblock %}
+
+{% block content %}
+    <strong>How many zeros are in the box?</strong>
+<div class="card" style="width:10rem;">
+  <div class="card-body">
+    <p class="card-text">{{player.nb_display1}}
+    <br>
+    {{player.nb_display2}}
+    <br>
+    {{player.nb_display3}}
+    <br>
+    {{player.nb_display4}}
+    </p>
+  </div>
+</div>
+    <tr>
+    <td class="tg-baqh" width="25%">{% formfield player.nb_inserted with label="Please enter the numbers of 0s" %}</td>
+    <td class="tg-lqy6" width="25%">{% next_button %}</td>
+    </tr>
+{% endblock %}
+
+

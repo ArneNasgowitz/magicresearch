@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Redistribution
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 40%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        You will now be presented with two different scenarios, one related to the effort task
+        and one related to the investment task. Two workers, who already completed these tasks,
+        have been matched randomly and you will see their initial payments. You take the role
+        of the decision-maker and can redistribute between the two workers.
+    </p>
+    <p>
+        Please choose what you consider the <strong>appropriate distribution of income</strong> between
+        worker 1 and worker 2.
+    </p>
+    {% next_button %}
+{% endblock %}
+
+

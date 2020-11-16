@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Redistribution
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 55%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Thank you for your answers. In the following, you will complete the effort and the
+        investment tasks yourself. Remember that your decisions in these two tasks will affect your
+        <strong>initial payment</strong>. A third person, the independent
+        decision-maker, will then decide your <strong>final payment</strong>, exactly in the way that
+        you just did in the practice round. Note that this person will not know your identity, only your
+        initial payments and the source of the inequality (investment or effort).
+    </p>
+    {% next_button %}
+{% endblock %}
+
+

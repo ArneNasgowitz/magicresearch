@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Essay question
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 35%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        For the next minute, we would like you to write a short essay about your <strong>beliefs and feelings
+        about God and religion</strong>. If you are not religious, please write about what the idea of
+        god means to you.  If you have time left before the minute is over, please continue writing about the same topic,
+        even if you feel like you’re repeating yourself. The task will start when you click the button and then
+        end automatically after <strong>90 seconds</strong>.
+    </p>
+    {% next_button %}
+{% endblock %}

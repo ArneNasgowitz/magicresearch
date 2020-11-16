@@ -1,0 +1,82 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Redistribution - Investment task
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Below you see the second scenario. Both workers completed the investmnt task you know from the practice round.
+    </p>
+    <p>
+        Worker 1 <strong>was lucky</strong> and got a high return of 6, while worker 2 was unlucky and
+        didn't receive any return.
+    </p>
+    <p>
+        Please choose what you consider the appropriate distribution
+        of income between worker 1 and worker 2 and enter it in the row called <strong>final payment</strong>.
+    </p>
+
+       <table class="table table-responsive table-sm">
+        <thead>
+            <tr align="center">
+                <th class="bg-warning" scope="col" style="width:33%">Luck</th>
+                <th scope="col" style="width:33%">Worker 1</th>
+                <th scope="col" style="width:33%">Worker 2</th>
+           </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Initial Payment</th>
+            <td align="center">
+                6
+            </td>
+            <td align="center">
+                0
+            </td>
+        </tr>
+        <tr>
+            <th>Final Payment</th>
+            <td align="center">
+                {% formfield player.redistribute_luck1 %}
+            </td>
+            <td align="center">
+                {% formfield player.redistribute_luck2 %}
+            </td>
+        </tbody>
+    </table>
+    {% next_button %}
+{% endblock %}
+
+{% comment %}
+       <table class="table table-bordered table-sm">
+        <thead>
+            <tr align="center">
+                <th scope="col", style="width:33%">#</th>
+                <th scope="col", style="width:33%">Initial payment</th>
+                <th scope="col", style="width:33%">Final payment</th>
+           </tr>
+        </thead>
+        <tbody>
+            {% for field in form %}
+                <tr>
+                    <th>{{ field.label }}</th>
+                    <th align="center">
+                        5
+                    </th>
+                    {% for choice in field %}
+                        <td align="center">
+                            {{ choice }}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table">
+    </table>
+{% endcomment %}
