@@ -1,0 +1,50 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Introduction
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 5%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Hello and thank you for choosing to work on this study. Please carefully read the instructions below,
+        before you start. Your payment will consist of a wage of 5 Rand and a bonus payment that will depend
+        on your performance in two main tasks. This bonus payment will in most cases be higher than the wage.
+    </p>
+    <p>
+        This study will consist of three parts:
+    </p>
+    <dl class="row">
+        <dt class="col-sm-2">Practice round</dt>
+        <dd class="col-sm-10">
+            <p>
+            Here you will get familiar with the two main tasks in the
+            experiment, as well as the payment scheme.
+            Paying close attention will help you to maximize your payment.
+            </p>
+        </dd>
+         <dt class="col-sm-2">Main round</dt>
+        <dd class="col-sm-10">
+            <p>
+            Here you will work on two tasks that will affect your bonus payment and
+            write a short essay.
+            </p>
+        </dd>
+        <dt class="col-sm-2">Survey round</dt>
+        <dd class="col-sm-10">
+            <p>
+            Finally we will ask you some questions related to the experiment.
+            </p>
+        </dd>
+    </dl>
+    <p>
+        Note that it is mandatory to complete all tasks in order to receive any payment.
+        We estimate that this study will take you around 15 minutes and ask you to complete it <strong>without taking any breaks</strong>
+    </p>
+    {% next_button %}
+{% endblock %}
+
+

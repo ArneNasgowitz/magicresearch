@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Practice round - Effort task
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        This is the effort task. You will see several boxes with 0s and 1s, as in the example below.
+        Please count the <strong>number of 0s</strong> in the box, enter this number
+        in the empty field below and click next.
+        Complete as many boxes as you can. The task will automatically stop after <strong>45 seconds</strong>. </p>
+    <p>
+        The time will start when you click on the next-button
+    </p>
+    <div class="card" style="width:10rem;">
+      <div class="card-body">
+        <p class="card-text">101010100
+        <br>
+        100100101
+        <br>
+        100100101
+        <br>
+        100100101
+        </p>
+      </div>
+    </div>
+    </br>
+    {% next_button %}
+{% endblock %}
+
+

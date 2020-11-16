@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Practice round - End
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<p>
+    You now finished the practice round for the two main tasks. Before you continue to the main round, please answer the
+    following two questions, which refer to the two tasks you completed:
+</p>
+    <p>
+    What will happen to your bonus payment, if you complete more boxes in the effort task? {% formfield player.att_effort %}
+    </p>
+    <p>
+    How much will you earn if you invest 2 Rand in the Cash account and 2 Rand in the Investment account?
+        {% formfield player.att_invest %}
+    </p>
+    Before we proceed to the main round, we will ask you to write a short essay and answer some questions.
+    {% next_button %}
+{% endblock %}
+
+

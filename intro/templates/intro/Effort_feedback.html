@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Practice round - Effort task
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p>
+        Many other workers like you have completed the task of counting  zeros.
+        Imagine that we rank the workers’ performance on this task on a scale from 1 to 10, where 1 is lowest performance
+        and 10 is top performance. Where on this rank do you believe that your performance belongs?
+    </p>
+    {% formfields %}
+    {% next_button %}
+{% endblock %}
+{%  comment  %}
+
+    This is an alternative specification that doesn't work yet, but is a starting point
+
+    <tr>
+        <td>{{ form.performance_guess.label }}</td>
+        </br>
+       {% for choice in form.performance_guess %}
+            <td>{{ choice }}</td>
+        {% endfor %}
+    </tr>
+{%  endcomment  %}
