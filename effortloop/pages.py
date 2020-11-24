@@ -110,7 +110,7 @@ class Investment(Page):
     def error_message(self,values):
         print('value is', values)
         if values['invest_cash_main'] + values['invest_inv_main'] != 4: # Might need to change that
-            return 'The sum has to be 4 Rand'
+            return 'The sum has to be 4 points'
 
     def before_next_page(self): # Here i will calculate whether the person was lucky or unlucky
         if (self.participant.id_in_session % 2) == 0: #If the participant has an even ID, which is the case in 50%
