@@ -22,7 +22,7 @@ class Investment_tr(Page):
     def error_message(self,values):
         print('value is', values)
         if values['invest_cash_tr'] + values['invest_inv_tr'] != 4: # Might need to change that
-            return 'The sum has to be 4 Rand'
+            return 'The sum has to be 4 points'
 
 class Effort_intro_tr(Page):
     def is_displayed(self):
