@@ -11,7 +11,7 @@
 {% block content %}
     <p>
         This is the investment task you know from the practice round.
-        You start this task with an amount of 4 Rand.
+        You start this task with an amount of 4 points. (Each point represents a fixed Dollar amount.)
         You can distribute this endowment between two accounts, the <strong>cash account</strong> and the
         <strong>investment account</strong>. Please note that your decision will affect your bonus payment!
     </p>
@@ -19,14 +19,14 @@
         The table at the bottom of the page gives you an overview over the five different choices that you have.
     </p>
     <p>
-        You have 4 Rand. How much do you want to place in the Cash account and how much in the Investment account?
+        You have 4 points. How much do you want to place in the Cash account and how much in the Investment account?
     </p>
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
         <h5 class="card-header">Cash Account</h5>
         <div class="card-body">
-            <p class="card-text">Every Rand you pay into the cash account will be directly transfered to your payment. There is no risk and no interest.</p>
+            <p class="card-text">Every point you pay into the cash account will be directly transfered to your payment. There is no risk and no interest.</p>
             {% formfield player.invest_cash_main %}
         </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="card">
         <h5 class="card-header">Investment Account</h5>
         <div class="card-body">
-            <p class="card-text">For every Rand you pay into the investment account, there is a 50% probability that this is trippled, and a 50% probability that you will lose your investment. </p>
+            <p class="card-text">For every point you pay into the investment account, there is a 50% probability that this is trippled, and a 50% probability that you will lose your investment. </p>
             {% formfield player.invest_inv_main %}
         </div>
     </div>
@@ -47,7 +47,7 @@
     <div id="demo" class="collapse">
         <div class="card card-body">
             Each row in the table (options A-E) represents one of the five possibilities,
-            how you can distribute the 4 Rand. The two Account-columns represent the choice that you
+            how you can distribute the 4 points. The two Account-columns represent the choice that you
             are going to make. The two Return-columns give you the payoff in the lucky case
             (when your investment is trippled) and the unlucky case (when you lose your investment).
                 <table class="table-sm table-responsive table table-striped text-center">
