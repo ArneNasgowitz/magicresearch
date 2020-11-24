@@ -3,8 +3,8 @@ from os import environ
 # mturk environment
 mturk_hit_settings = {
     'keywords': ['study','bonus'],
-    'title': 'Academic study (5-15 Rand for 15 min)',
-    'description':'Do various tasks on economic behavior and get between 5 and 15 Rand, depending on your decisions',
+    'title': 'Academic study (1-2.5 USD for 15 min)',
+    'description':'Do various tasks on economic behavior and earn between 1 and 2.5 USD, depending on your decisions',
     'template': 'global/MTurkPreview.html',
     'minutes_alotted_per_assignment': 60,
     'expiration_hours': 7*24, # a week, hopefully limit reached before!
@@ -43,7 +43,7 @@ SESSION_CONFIGS = [
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=5.00, doc=""
+    real_world_currency_per_point=0.125, participation_fee=1.00, doc=""
 )
 
 # ISO-639 code
@@ -51,8 +51,8 @@ SESSION_CONFIG_DEFAULTS = dict(
 LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'ZAR'
-USE_POINTS = False
+REAL_WORLD_CURRENCY_CODE = 'USD'
+USE_POINTS = True
 
 ROOMS = [
     dict(
